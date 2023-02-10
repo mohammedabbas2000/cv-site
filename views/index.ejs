@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CV Site</title>
+  </head>
+  <body>
+    <header>
+      <h1>Mohammed Abbas</h1>
+      <p>Software Engineer</p>
+    </header>
+
+    <section>
+      <h2>Experience</h2>
+      <ul>
+        <% experience.forEach(exp => { %>
+          <li>
+            <strong><%= exp.title %></strong> at <%= exp.company %>
+            <p><%= exp.description %></p>
+          </li>
+        <% }); %>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <% education.forEach(edu => { %>
+          <li>
+            <%= edu.degree %> from <%= edu.institution %> (<%= edu.year %>)
+          </li>
+        <% }); %>
+      </ul>
+    </section>
+  </body>
+</html>
